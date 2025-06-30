@@ -1,8 +1,10 @@
-/* ===== Pixel-Perfect Dark Theme ===== */
+/* ===== Core Styles ===== */
 :root {
-  --color-zinc-900: oklch(21% .006 285.885); /* Exact zinc-900 */
-  --color-zinc-200: oklch(88% .005 285.885); /* zinc-200 */
-  --color-blue-500: oklch(60% .2 255.821);   /* blue-500 */
+  --color-zinc-900: oklch(21% .006 285.885);
+  --color-zinc-800: oklch(27% .007 285.885);
+  --color-zinc-200: oklch(88% .005 285.885);
+  --color-blue-500: oklch(60% .2 255.821);
+  --color-blue-400: oklch(70% .15 255.821);
 }
 
 body {
@@ -10,68 +12,66 @@ body {
   background-color: var(--color-zinc-900);
   color: var(--color-zinc-200);
   margin: 0;
-  padding: 3rem;
+  padding: 3rem; /* p-12 */
   min-height: 100vh;
 }
 
-/* Sections */
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+h1 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 500; /* font-medium */
+  color: #f4f4f5; /* zinc-100 */
+  margin: 0;
+}
+
+/* Content Sections */
 .section {
-  background: oklch(27% .007 285.885); /* zinc-800 */
+  background-color: var(--color-zinc-800);
   border-left: 4px solid var(--color-blue-500);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1.5rem; /* p-6 */
+  margin-bottom: 1.5rem; /* mb-6 */
   border-radius: 0 0.375rem 0.375rem 0;
 }
 
 .section-title {
-  font-weight: 600;
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
   color: white;
-  margin-bottom: 0.5rem;
 }
 
 .section-item {
-  color: oklch(70% .15 255.821); /* blue-400 */
+  color: var(--color-blue-400);
+  margin-left: 1rem; /* ml-4 */
   cursor: pointer;
-  margin-left: 1rem;
-  display: block;
-  margin-top: 0.5rem;
+}
+
+.section-item:hover {
+  text-decoration: underline;
+}
+
+/* Permission Warning */
+.permission-warning {
+  color: #a1a1aa; /* zinc-400 */
+  font-style: italic;
+  margin-bottom: 1.5rem; /* mb-6 */
 }
 
 /* Divider */
 hr {
   border: 0;
   height: 1px;
-  background: oklch(25% .006 285.885); /* zinc-700 */
-  margin: 1.5rem 0;
+  background-color: var(--color-zinc-700);
+  margin: 1.5rem 0; /* my-6 */
 }
-/* ===== Logo + Header Styles ===== */
-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.logo {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-}
-
-/* ===== Existing Dark Theme ===== */
-body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: oklch(21% .006 285.885); /* zinc-900 */
-  color: oklch(88% .005 285.885); /* zinc-200 */
-  margin: 0;
-  padding: 3rem;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 1.875rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-/* ... (keep all other existing CSS rules) ... */
