@@ -44,3 +44,34 @@ hr {
   background: oklch(25% .006 285.885); /* zinc-700 */
   margin: 1.5rem 0;
 }
+/* ===== Logo + Header Styles ===== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* ===== Existing Dark Theme ===== */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: oklch(21% .006 285.885); /* zinc-900 */
+  color: oklch(88% .005 285.885); /* zinc-200 */
+  margin: 0;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ... (keep all other existing CSS rules) ... */
