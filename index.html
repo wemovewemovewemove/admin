@@ -2,41 +2,38 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pathos - III</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pathos Administration</title>
+  <link rel="stylesheet" href="./Pathosministration_files/tailwind-BtqrfEGf.css" />
+  <link rel="stylesheet" href="./Pathosministration_files/style-Dl9Bm5cW.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Pathos Logo" class="logo" />
-    <h1>Pathos - III</h1>
-    <button class="login-btn">🔐 Log In</button>
-  </header>
-
-  <nav class="breadcrumb">
-    <a href="#">Home</a> / <span>Overview</span>
-  </nav>
-
-  <h2>Administration</h2>
-
-  <div class="card-container">
-    <div class="card">
-      <h3>📋 App Templates</h3>
-      <p>Configure Application Templates</p>
-      <button>Edit</button>
+  <main class="w-full min-h-screen p-12 flex flex-col bg-zinc-900 text-zinc-200">
+    <div class="w-full flex justify-between items-center mb-6">
+      <a href="https://admin.scpf.site/" class="flex items-center gap-4">
+        <img src="./Pathosministration_files/pathos-logo-64x64.png" alt="Pathos Logo" width="64" height="64" />
+        <h1 class="text-3xl font-medium text-gray-100 group-hover:underline">Pathos - III</h1>
+      </a>
+      <button class="bg-zinc-900 text-zinc-50 px-4 py-2 rounded-md hover:bg-zinc-900/90">
+        <a href="https://api.scpf.site/auth/roblox/login-admin" class="flex items-center gap-1">
+          <!-- Login SVG omitted for brevity -->
+          Log In
+        </a>
+      </button>
     </div>
 
-    <div class="card">
-      <h3>⚙️ System Config</h3>
-      <p>Configure Cytosine Internal settings</p>
-      <button>Configure</button>
-    </div>
+    <nav aria-label="breadcrumb" class="mb-6 text-sm text-zinc-500">
+      <ol class="flex items-center gap-1.5">
+        <li><a href="https://admin.scpf.site/" class="hover:text-zinc-950 dark:hover:text-zinc-50">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><span aria-current="page" class="font-normal text-zinc-50">Overview</span></li>
+      </ol>
+    </nav>
 
-    <div class="card">
-      <h3>🔐 Permission Policies</h3>
-      <p>Configure Pathos Permissions Policies</p>
-      <button>Configure</button>
-    </div>
-  </div>
+    <section>
+      <h1 class="text-3xl font-semibold mb-2">Administration</h1>
+      <p class="text-zinc-500">You do not have permission to access the administration panel.</p>
+    </section>
+  </main>
 </body>
 </html>
