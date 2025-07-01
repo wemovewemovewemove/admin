@@ -1,25 +1,17 @@
 :root {
-  --bg-dark: #0a0a0a;
-  --text-light: #eee;
-  --text-muted: #777;
-  --border-light: #bbb;
-  --border-hover: #eee;
-  --button-bg-hover: #eee;
-  --button-text-hover: #0a0a0a;
-  --breadcrumb-color: #888;
-  --breadcrumb-divider-color: #555;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+  --color-zinc-900: oklch(21% .006 285.885);
+  --color-zinc-800: oklch(27% .007 285.885);
+  --color-zinc-700: oklch(33% .007 285.885);
+  --color-zinc-200: oklch(88% .005 285.885);
+  --color-blue-400: oklch(70% .15 255.821);
+  --white: #ffffff;
+  --breadcrumb-color: #aaa;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--color-zinc-900);
+  color: var(--color-zinc-200);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -30,13 +22,14 @@ body {
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem; /* Reduced from 2rem to bring header and breadcrumb closer */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.25rem; /* Small margin below header */
 }
 
 .header-left {
@@ -54,7 +47,7 @@ header {
 header h1 {
   font-size: 1.875rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: var(--white);
   transition: text-decoration 0.3s;
 }
 
@@ -69,8 +62,8 @@ header h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--text-light);
-  color: var(--bg-dark);
+  background-color: var(--white);
+  color: var(--color-zinc-900);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -80,30 +73,30 @@ header h1 {
 }
 
 .login-btn:hover {
-  background-color: var(--button-bg-hover);
-  color: var(--button-text-hover);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.875rem;
+  font-size: 0.8rem; /* Slightly smaller font */
   color: var(--breadcrumb-color);
+  margin-top: 0;
 }
 
 .breadcrumb a {
-  color: var(--breadcrumb-color);
+  color: #888;
   transition: color 0.2s ease;
   text-decoration: none;
 }
 
 .breadcrumb a:hover {
-  color: var(--text-light);
+  color: #fff;
 }
 
 .breadcrumb .divider {
-  color: var(--breadcrumb-divider-color);
+  color: #666;
 }
 
 .main-content h2 {
@@ -113,6 +106,6 @@ header h1 {
 }
 
 .no-access {
-  color: var(--text-muted);
+  color: #aaa;
   font-size: 1rem;
 }
