@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pathos - III</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="images/logo.png" alt="Pathos Logo" class="logo">
     <h1>Pathos - III</h1>
+    <button class="login-btn">🔐 Log In</button>
   </header>
 
+  <nav class="breadcrumb">
+    <a href="#">Home</a> / <span>Overview</span>
+  </nav>
+
   <h2>Administration</h2>
-  
-  <div class="section">
-    <div class="section-title">App Templates</div>
-    <div class="section-item">Configure Application Templates</div>
-  </div>
-  
-  <hr>
-  
-  <div class="section">
-    <div class="section-title">System Config</div>
-    <div class="section-item">Configure Cytosine Internal settings</div>
-  </div>
-  
-  <hr>
-  
-  <div class="section">
-    <div class="section-title">Permission Policies</div>
-    <div class="section-item">Configure Pathos Permissions Policies</div>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>📋 App Templates</h3>
+      <p>Configure Application Templates</p>
+      <button>Edit</button>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ System Config</h3>
+      <p>Configure Cytosine Internal settings</p>
+      <button>Configure</button>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Permission Policies</h3>
+      <p>Configure Pathos Permissions Policies</p>
+      <button>Configure</button>
+    </div>
   </div>
 </body>
 </html>
