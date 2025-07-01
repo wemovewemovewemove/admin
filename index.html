@@ -5,39 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pathos Administration</title>
   <style>
-    /* Dark theme variables */
+    /* Import Inter font from Google Fonts for exact match */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Root dark mode variables matching SCP admin site */
     :root.dark {
       --bg-color: #141414;
-      --text-color: #f8f8f8;
       --header-bg: #1e1e1e;
       --header-border: #3c3c3c;
+      --text-color: #f8f8f8;
       --btn-bg: #2b2b2b;
       --btn-hover-bg: #3e3e3e;
       --btn-color: #f8f8f8;
-      --divider-color: #555;
+      --divider-color: #555555;
       --link-color: #4ea1f7;
-    }
-    /* Default to light colors if no dark class */
-    :root {
-      --bg-color: #fff;
-      --text-color: #222;
-      --header-bg: #f9f9f9;
-      --header-border: #ddd;
-      --btn-bg: #eee;
-      --btn-hover-bg: #ccc;
-      --btn-color: #222;
-      --divider-color: #aaa;
-      --link-color: #0066cc;
+      --shadow-color: rgba(0, 0, 0, 0.5);
     }
 
-    /* Apply background and text colors from variables */
+    /* Basic resets */
     html, body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0; height: 100%;
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'Inter', sans-serif;
-      height: 100%;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      user-select: none;
     }
 
     a {
@@ -61,24 +55,27 @@
       background-color: var(--header-bg);
       border-bottom: 1px solid var(--header-border);
       padding: 1rem 1rem;
-      border-radius: 4px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px var(--shadow-color);
     }
 
     .header-left {
       display: flex;
       align-items: center;
       gap: 1rem;
+      user-select: none;
     }
 
     .logo {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
+      image-rendering: pixelated;
     }
 
     header h1 {
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin: 0;
     }
 
@@ -89,18 +86,17 @@
       background-color: var(--btn-bg);
       color: var(--btn-color);
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
       font-size: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       transition: background-color 0.3s ease;
+      user-select: none;
     }
-
     .login-btn:hover {
       background-color: var(--btn-hover-bg);
     }
-
     .login-btn svg {
       stroke: var(--btn-color);
       width: 18px;
@@ -116,6 +112,7 @@
       align-items: center;
       gap: 0.5rem;
       user-select: none;
+      font-weight: 600;
     }
 
     nav.breadcrumb .divider {
@@ -125,22 +122,23 @@
 
     section.main-content {
       background-color: var(--header-bg);
-      padding: 2rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px var(--shadow-color);
       text-align: center;
+      user-select: none;
     }
 
     section.main-content h2 {
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 2.25rem;
       margin-bottom: 1rem;
     }
 
     p.no-access {
-      font-size: 1.2rem;
-      color: #f44336;
-      font-weight: 500;
+      font-size: 1.25rem;
+      color: #ff4c4c;
+      font-weight: 600;
     }
   </style>
 </head>
