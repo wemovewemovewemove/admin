@@ -4,153 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pathos Administration</title>
-  <style>
-    /* Import Inter font from Google Fonts for exact match */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    /* Root dark mode variables matching SCP admin site */
-    :root.dark {
-      --bg-color: #141414;
-      --header-bg: #1e1e1e;
-      --header-border: #3c3c3c;
-      --text-color: #f8f8f8;
-      --btn-bg: #2b2b2b;
-      --btn-hover-bg: #3e3e3e;
-      --btn-color: #f8f8f8;
-      --divider-color: #555555;
-      --link-color: #4ea1f7;
-      --shadow-color: rgba(0, 0, 0, 0.5);
-    }
-
-    /* Basic resets */
-    html, body {
-      margin: 0; padding: 0; height: 100%;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      user-select: none;
-    }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--header-bg);
-      border-bottom: 1px solid var(--header-border);
-      padding: 1rem 1rem;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 2px 8px var(--shadow-color);
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      user-select: none;
-    }
-
-    .logo {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      image-rendering: pixelated;
-    }
-
-    header h1 {
-      font-weight: 600;
-      font-size: 1.75rem;
-      margin: 0;
-    }
-
-    .login-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--btn-bg);
-      color: var(--btn-color);
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.6rem 1.2rem;
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-    .login-btn:hover {
-      background-color: var(--btn-hover-bg);
-    }
-    .login-btn svg {
-      stroke: var(--btn-color);
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
-    nav.breadcrumb {
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
-      color: var(--text-color);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      user-select: none;
-      font-weight: 600;
-    }
-
-    nav.breadcrumb .divider {
-      color: var(--divider-color);
-      user-select: none;
-    }
-
-    section.main-content {
-      background-color: var(--header-bg);
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 20px var(--shadow-color);
-      text-align: center;
-      user-select: none;
-    }
-
-    section.main-content h2 {
-      font-weight: 600;
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-    }
-
-    p.no-access {
-      font-size: 1.25rem;
-      color: #ff4c4c;
-      font-weight: 600;
-    }
-  </style>
+  <!-- Link directly to admin.scpf.site's CSS for 1:1 styling -->
+  <link rel="stylesheet" href="https://admin.scpf.site/tailwind-BtqrfEGf.css" />
 </head>
-<body>
-  <main class="container">
-    <header>
-      <a href="#" class="header-left">
-        <img src="images/logo.png" alt="Pathos Logo" class="logo" />
-        <h1>Pathos - III</h1>
+<body class="dark bg-gray-900 text-gray-100">
+  <main class="min-h-screen flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="flex items-center justify-between py-6">
+      <a href="#" class="flex items-center space-x-3">
+        <img src="images/logo.png" alt="Pathos Logo" class="h-12 w-auto" />
+        <h1 class="text-2xl font-semibold tracking-tight">Pathos - III</h1>
       </a>
-      <button class="login-btn" aria-label="Log In">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <button class="flex items-center space-x-2 text-sm font-semibold hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-current" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
           <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
           <polyline points="10 17 15 12 10 7" />
           <line x1="15" x2="3" y1="12" y2="12" />
@@ -159,15 +24,17 @@
       </button>
     </header>
 
-    <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="#">Home</a>
-      <span class="divider">/</span>
-      <span>Overview</span>
+    <nav class="text-sm font-medium text-gray-400 mb-6" aria-label="Breadcrumb">
+      <ol class="list-reset flex space-x-2">
+        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li aria-current="page" class="text-gray-500">Overview</li>
+      </ol>
     </nav>
 
-    <section class="main-content">
-      <h2>Administration</h2>
-      <p class="no-access">You do not have permission to access the administration panel.</p>
+    <section class="flex-grow">
+      <h2 class="text-xl font-semibold mb-3">Administration</h2>
+      <p class="text-red-400 font-mono bg-red-900 bg-opacity-50 p-4 rounded-md inline-block">You do not have permission to access the administration panel.</p>
     </section>
   </main>
 </body>
