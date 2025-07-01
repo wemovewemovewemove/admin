@@ -9,13 +9,14 @@
   --white: #ffffff;
 }
 
-/* === Global === */
+/* === Global Styles === */
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   background-color: var(--color-zinc-900);
   color: var(--color-zinc-200);
   margin: 0;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 h1, h2 {
@@ -39,14 +40,14 @@ a:hover {
 /* === Header === */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 
 .logo {
-  height: 64px;
-  width: 64px;
+  height: 48px;
+  width: 48px;
   margin-right: 1rem;
 }
 
@@ -54,7 +55,10 @@ header h1 {
   font-size: 1.875rem;
   font-weight: 500;
   color: var(--white);
-  flex-grow: 1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .login-btn {
@@ -109,4 +113,15 @@ header h1 {
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* === Optional: Responsive Cleanup === */
+@media (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
