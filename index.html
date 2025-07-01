@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pathos Administration</title>
   <style>
-    /* ====== Embedded SCP Foundation admin site CSS (main parts) ====== */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    :root {
+    /* Dark theme variables */
+    :root.dark {
       --bg-color: #141414;
       --text-color: #f8f8f8;
       --header-bg: #1e1e1e;
@@ -18,15 +17,26 @@
       --divider-color: #555;
       --link-color: #4ea1f7;
     }
+    /* Default to light colors if no dark class */
+    :root {
+      --bg-color: #fff;
+      --text-color: #222;
+      --header-bg: #f9f9f9;
+      --header-border: #ddd;
+      --btn-bg: #eee;
+      --btn-hover-bg: #ccc;
+      --btn-color: #222;
+      --divider-color: #aaa;
+      --link-color: #0066cc;
+    }
 
+    /* Apply background and text colors from variables */
     html, body {
       margin: 0;
       padding: 0;
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       height: 100%;
     }
 
@@ -34,7 +44,6 @@
       color: var(--link-color);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -130,22 +139,8 @@
 
     p.no-access {
       font-size: 1.2rem;
-      color: #f44336; /* Red */
+      color: #f44336;
       font-weight: 500;
-    }
-
-    /* Scrollbar styling for dark mode */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #1e1e1e;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #4ea1f7;
-      border-radius: 4px;
     }
   </style>
 </head>
