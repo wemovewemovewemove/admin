@@ -29,12 +29,7 @@ h2 {
 }
 
 a {
-  color: var(--color-blue-400);
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /* === Header === */
@@ -45,10 +40,15 @@ header {
   margin-bottom: 1.5rem;
 }
 
+.header-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   height: 48px;
   width: 48px;
-  margin-right: 1rem;
 }
 
 header h1 {
@@ -56,9 +56,6 @@ header h1 {
   font-weight: 500;
   color: var(--white);
   margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 .login-btn {
@@ -76,6 +73,23 @@ header h1 {
   font-size: 0.875rem;
   color: #aaa;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Increased spacing */
+}
+
+.breadcrumb a {
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #fff;
+}
+
+.breadcrumb .divider {
+  color: #666;
+  font-weight: 400;
 }
 
 /* === Cards === */
@@ -115,7 +129,7 @@ header h1 {
   cursor: pointer;
 }
 
-/* === Optional: Responsive Cleanup === */
+/* === Responsive === */
 @media (max-width: 700px) {
   .card-container {
     flex-direction: column;
