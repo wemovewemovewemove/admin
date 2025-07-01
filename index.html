@@ -2,37 +2,36 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pathos Administration</title>
-  <link rel="stylesheet" href="./Pathosministration_files/tailwind-BtqrfEGf.css" />
-  <link rel="stylesheet" href="./Pathosministration_files/style-Dl9Bm5cW.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="w-full min-h-screen p-12 flex flex-col bg-zinc-900 text-zinc-200">
-    <div class="w-full flex justify-between items-center mb-6">
-      <a href="https://admin.scpf.site/" class="flex items-center gap-4">
-        <img src="./Pathosministration_files/pathos-logo-64x64.png" alt="Pathos Logo" width="64" height="64" />
-        <h1 class="text-3xl font-medium text-gray-100 group-hover:underline">Pathos - III</h1>
+  <main class="container">
+    <header>
+      <a href="#" class="header-left">
+        <img src="images/logo.png" alt="Pathos Logo" class="logo">
+        <h1>Pathos - III</h1>
       </a>
-      <button class="bg-zinc-900 text-zinc-50 px-4 py-2 rounded-md hover:bg-zinc-900/90">
-        <a href="https://api.scpf.site/auth/roblox/login-admin" class="flex items-center gap-1">
-          <!-- Login SVG omitted for brevity -->
-          Log In
-        </a>
+      <button class="login-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+          <polyline points="10 17 15 12 10 7" />
+          <line x1="15" x2="3" y1="12" y2="12" />
+        </svg>
+        <span>Log In</span>
       </button>
-    </div>
+    </header>
 
-    <nav aria-label="breadcrumb" class="mb-6 text-sm text-zinc-500">
-      <ol class="flex items-center gap-1.5">
-        <li><a href="https://admin.scpf.site/" class="hover:text-zinc-950 dark:hover:text-zinc-50">Home</a></li>
-        <li aria-hidden="true">/</li>
-        <li><span aria-current="page" class="font-normal text-zinc-50">Overview</span></li>
-      </ol>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span class="divider">/</span>
+      <span>Overview</span>
     </nav>
 
-    <section>
-      <h1 class="text-3xl font-semibold mb-2">Administration</h1>
-      <p class="text-zinc-500">You do not have permission to access the administration panel.</p>
+    <section class="main-content">
+      <h2>Administration</h2>
+      <p class="no-access">You do not have permission to access the administration panel.</p>
     </section>
   </main>
 </body>
